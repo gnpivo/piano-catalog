@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Add Composer{% endblock %}
+
+{% block content %}
+	<form method="post" style="margin: auto; width: max-content">
+		<p>
+		<label for="name">Full Name</label>
+		<input id="name" name="name" type="text" value="{{ request.form['name'] }}" required>
+		</p>
+		<p>
+		<label for="birthday">Date of Birth</label>
+		<input id="birthday" name="birthday" type="date" value="{{ request.form['birthday'] }}" required>
+		</p>
+		<button class="btn btn-primary" type="submit">Add Composer</button>
+	</form>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block title %}Add Composition{% endblock %}
+
+{% block content %}
+	<form method="post" style="margin: auto; width: max-content">
+		<p>
+		<label for="opus">Opus Number</label>
+		<input id="opus" name="opus" type="number" value="{{ request.form['opus'] }}" required>
+		</p>
+		<p>
+		<label for="movement">Movement Number</label>
+		<input id="movement" name="movement" type="number" value="{{ request.form['movement'] }}" required>
+		</p>
+		<p>
+		<label for="title">Title of Composition</label>
+		<input id="title" name="title" type="text" value="{{ request.form['title'] }}" required>
+		</p>
+		<p>
+		<label for="key">Key Signature</label>
+		<input id="key" name="key" type="text" value="{{ request.form['key'] }}" required>
+		</p>
+		<p>
+		<label for="composer">Composer ID</label>
+		<input id="composer" name="composer" type="number" value="{{ request.form['composer'] }}" required>
+		</p>
+		<p>
+		<label for="url">Sheet Music URL</label>
+		<input id="url" name="url" type="text" value="{{ request.form['url'] }}" required>
+		</p>
+		<button class="btn btn-primary" type="submit">Add Composition</button>
+	</form>
+{% endblock %}
